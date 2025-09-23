@@ -1,6 +1,9 @@
-from fastapi import FastAPI
-from calculadora.view import view_calc
+from fastapi import FastAPI, APIRouter
+from calculadora.controller.cal_controller import router
 
 app =FastAPI()
+app.include_router(router)
 
-app.include_router(view_calc.router)
+@app.get("/")
+def inicio():
+    return{"Mensagem":"calculadora"}
