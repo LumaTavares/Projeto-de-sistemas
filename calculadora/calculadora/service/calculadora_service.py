@@ -12,6 +12,6 @@ def listar_operacoes():
     return operacoes
 def executar(operacao: str, a:float,b:float):
     if not hasattr(model,operacao):#verificar se objeto existe
-        raise ValueError(f'Operação : {operacao} não existe') 
+        raise ValueError(f'Ope  ração : {operacao} não existe') 
     metodo = getattr(model, operacao) #acessar o metodo dinamicamente 
-    return metodo(a,b)
+    return metodo(a,b)  
