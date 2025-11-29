@@ -4,7 +4,6 @@ import inspect
 op = operacoes()
 def listar_ops():
     i=0
-    print("Escolha uma das seguintes funções")
     opcoes = {}
     for name,value in inspect.getmembers(op,inspect.ismethod):
         i+=1
